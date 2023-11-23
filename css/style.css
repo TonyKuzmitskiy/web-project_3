@@ -1,0 +1,186 @@
+@charset "UTF-8";
+/* line 1, ../../../../../Users/tonykuzmickiy/Desktop/академ/web/projects/project_3/sass/style.sass */
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 6, ../../../../../Users/tonykuzmickiy/Desktop/академ/web/projects/project_3/sass/style.sass */
+html {
+  font-size: 62.5%;
+}
+
+/* line 9, ../../../../../Users/tonykuzmickiy/Desktop/академ/web/projects/project_3/sass/style.sass */
+body {
+  font-family: "Roboto";
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  font-weight: 400;
+  color: #777777;
+  padding: 5rem;
+  background-color: white;
+}
+
+/* line 18, ../../../../../Users/tonykuzmickiy/Desktop/академ/web/projects/project_3/sass/style.sass */
+.container {
+  background-color: #f7f7f7;
+}
+
+/* line 21, ../../../../../Users/tonykuzmickiy/Desktop/академ/web/projects/project_3/sass/style.sass */
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/header-background.jpg) center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+
+/* line 26, ../../../../../Users/tonykuzmickiy/Desktop/академ/web/projects/project_3/sass/style.sass */
+.header__logo {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  height: 7rem;
+  width: 5.6rem;
+}
+
+/* line 32, ../../../../../Users/tonykuzmickiy/Desktop/академ/web/projects/project_3/sass/style.sass */
+.header__box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+/* line 40, ../../../../../Users/tonykuzmickiy/Desktop/академ/web/projects/project_3/sass/style.sass */
+.title-first {
+  color: #ffffff;
+}
+
+/* line 42, ../../../../../Users/tonykuzmickiy/Desktop/академ/web/projects/project_3/sass/style.sass */
+.title-first__main {
+  text-transform: uppercase;
+  display: block;
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 6rem;
+  letter-spacing: 1rem;
+  margin-bottom: 1rem;
+  animation-name: leftToRight;
+  animation-duration: 1.7s;
+  animation-delay: 2s;
+  animation-timing-function: easy;
+  backface-visibility: hidden;
+}
+
+/* line 55, ../../../../../Users/tonykuzmickiy/Desktop/академ/web/projects/project_3/sass/style.sass */
+.title-first__secondary {
+  display: block;
+  font-weight: 100;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: .5rem;
+  animation-name: rightToLeft;
+  animation-duration: 1.7s;
+  animation-delay: 2s;
+  animation-timing-function: easy;
+  backface-visibility: hidden;
+  margin-bottom: 6.5rem;
+}
+
+/* line 69, ../../../../../Users/tonykuzmickiy/Desktop/академ/web/projects/project_3/sass/style.sass */
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #777777;
+  padding: 1.5rem 4rem;
+  background: white;
+  border-radius: 5rem;
+  display: inline-block;
+  transition: all .3s;
+  position: relative;
+  font-size: 2rem;
+}
+
+/* line 80, ../../../../../Users/tonykuzmickiy/Desktop/академ/web/projects/project_3/sass/style.sass */
+.btn:hover {
+  transform: translateY(-0.4rem);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* line 83, ../../../../../Users/tonykuzmickiy/Desktop/академ/web/projects/project_3/sass/style.sass */
+.btn:hover::after {
+  opacity: 0;
+  transform: scaleX(1.5) scaleY(1.7);
+}
+
+/* line 86, ../../../../../Users/tonykuzmickiy/Desktop/академ/web/projects/project_3/sass/style.sass */
+.btn:active {
+  transform: translateY(-0.2rem);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* line 89, ../../../../../Users/tonykuzmickiy/Desktop/академ/web/projects/project_3/sass/style.sass */
+.btn::after {
+  content: "";
+  background: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+/* line 101, ../../../../../Users/tonykuzmickiy/Desktop/академ/web/projects/project_3/sass/style.sass */
+.btn_animated {
+  animation: BtnToUp .5s ease-out .7s;
+  animation-fill-mode: backwards;
+}
+
+/* Animations for project */
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes BtnToUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
